@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Login</title>
+  </head>
+  <body>
+    {% block content %}
+   <div class="justify-content-center border-1" style="width: 500px;height: 500px;margin-left: 400px;text-align: center;">
+    <h1 style="justify-content: center;color: darkgreen;margin-top: 10px;">SignIn</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <br>
+        <input type="submit" class="btn-success">
+    </form>
+    {% endblock %}
+   </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    
+  </body>
+</html>
